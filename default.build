@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<project name="boo-md-addins-builds" default="build">
+
+	<property name="boo.build.dir" value="${path::get-full-path('2.4')}/boo/bin" />
+
+	<target name="build" depends="init">
+	
+		<nant buildfile="../boo-md-addins/default.build">
+			<properties>
+				<property name="md.addins.dir" value="${boo.build.dir}" />
+			</properties>
+		</nant>
+		
+		<delete>
+			<fileset basedir="${boo.build.dir}">
+				<include name="**/*.mdb" />
+			</fileset>
+		</delete>
+	</target>
+	
+	<target name="init">
+		<delete dir="${boo.build.dir}" />
+		<mkdir dir="${boo.build.dir}" />
+	</target>
+
+</project>
+		
