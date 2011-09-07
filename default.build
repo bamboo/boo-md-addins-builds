@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <project name="boo-md-addins-builds" default="build">
 
-	<property name="boo.build.dir" value="${path::get-full-path('2.4')}/boo/bin" />
+	<property name="md.version" value="2.4" />
+	<property name="boo.build.dir" value="${path::get-full-path(md.version)}/boo/bin" />
 
 	<target name="build" depends="init">
 	
