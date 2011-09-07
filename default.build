@@ -8,7 +8,7 @@
 	
 		<nant buildfile="../boo-md-addins/default.build">
 			<properties>
-				<property name="md.addins.dir" value="${boo.build.dir}" />
+				<property name="boo.addin.dir" value="${boo.build.dir}" />
 			</properties>
 		</nant>
 		
